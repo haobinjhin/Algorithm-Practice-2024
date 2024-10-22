@@ -76,6 +76,8 @@ function rockPaperScissors(input) {
   );
 }
 
+
+/* ALGORITHM */
 function getHistory() {
   DOMSelectors.content.innerHTML = "";
   DOMSelectors.history.innerHTML = "";
