@@ -27,15 +27,20 @@ for (let i = 1; i<=term; i++){
 
 }
 
+const parkspace = 5;
+const spaceone = "CC..C";
+const spacetwo = ".CC..";
 
-class Node {
-    constructor(val) {
-        this.val = val;
-        this.next = null;
+
+
+function parkingspace(space, firstspace, secondspace){
+    let emptyspace = 0;
+    for(let i = 0; i <=space; i++){
+        if (firstspace[i] === '.' && secondspace[i] === '.'){
+                emptyspace ++
+            }
+        }
+        console.log(emptyspace)
     }
-}
+    
 
-let SkibidiTheFirst = new Node(2);
-let SkibidiTheSecond = new Node(1);
-
-SkibidiTheFirst.next = SkibidiTheSecond;
