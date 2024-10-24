@@ -44,3 +44,60 @@ function parkingspace(space, firstspace, secondspace){
     }
     
 
+function binarytodecimal(binary){
+
+    let digit = 0
+    let firstnum = 0
+
+    while(binary > 0){
+        binary = binary/10
+        digit++ 
+    }
+
+    for(let i = 0; i <= digit; i++){
+        let digitnum = binary[i];
+        let position = digit;
+
+        binaryplace = 2**position;
+
+        let secondnum = digitnum*binaryplace;
+        firstnum += secondnum
+
+        position -= 1
+    }
+    console.log(firstnum)
+}
+
+binarytodecimal(1010)
+
+/*
+function binarydecimal(binary){
+
+    let digit = 0
+    let number1 = 0
+
+
+    while (binary >0){
+    binary = binary/10
+    digit = digit + 1
+    }
+
+    for(i = 0; i<=digit; i++){
+    whatdigit = binary[i]
+
+
+    let number2 = whatdigit*(2^digit)
+
+    num = number2 + number1
+    number1 = num
+
+    digit = digit - 1  
+    }
+
+
+
+
+}
+
+
+*/
