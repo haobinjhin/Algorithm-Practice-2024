@@ -45,59 +45,45 @@ function parkingspace(space, firstspace, secondspace){
     
 
 function binarytodecimal(binary){
-
-    let digit = 0
-    let firstnum = 0
-
-    while(binary > 0){
-        binary = binary/10
-        digit++ 
+    let digit = 0;
+        
+    let pseudobinary = binary
+        
+    while(pseudobinary  > 1){
+        pseudobinary  = pseudobinary /10
+        digit++
     }
+    
+        let num1 = 0;
+        let numfinal = 0;
+        let standindigit = digit
+    
+    for(i = 0; i<standindigit; i++){
 
-    for(let i = 0; i <= digit; i++){
-        let digitnum = binary[i];
-        let position = digit;
+        binary = String(binary)
+            
+        let bidigit = binary[i]; 
+    
+        bidigit = Number(bidigit)
+    
+        let binaryplace = 2**(digit-1)
 
-        binaryplace = 2**position;
+        let num2 = binaryplace*bidigit
 
-        let secondnum = digitnum*binaryplace;
-        firstnum += secondnum
+        numfinal = num1 + num2
 
-        position -= 1
+     
+
+        num1 = numfinal
+        digit = digit - 1
+       
     }
-    console.log(firstnum)
+    console.log(numfinal)
+    
 }
-
-binarytodecimal(1010)
-
-/*
-function binarydecimal(binary){
-
-    let digit = 0
-    let number1 = 0
-
-
-    while (binary >0){
-    binary = binary/10
-    digit = digit + 1
-    }
-
-    for(i = 0; i<=digit; i++){
-    whatdigit = binary[i]
-
-
-    let number2 = whatdigit*(2^digit)
-
-    num = number2 + number1
-    number1 = num
-
-    digit = digit - 1  
-    }
+    
+binarytodecimal(111111)
 
 
 
 
-}
-
-
-*/
