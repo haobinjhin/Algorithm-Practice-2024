@@ -46,7 +46,6 @@ function parkingspace(space, firstspace, secondspace){
 
 function binarytodecimal(binary){
     let digit = 0;
-        
     let pseudobinary = binary
         
     while(pseudobinary  > 1){
@@ -61,7 +60,6 @@ function binarytodecimal(binary){
     for(i = 0; i<standindigit; i++){
 
         binary = String(binary)
-            
         let bidigit = binary[i]; 
     
         bidigit = Number(bidigit)
@@ -82,8 +80,60 @@ function binarytodecimal(binary){
     
 }
     
-binarytodecimal(111111)
 
 
 
 
+function binarytodec(binary){
+    let decimal = 0;
+
+    for (let i = 0; i < binary.length; i++){
+        if (binary[binary.length - 1 -i] === "1"){
+            decimal = decimal + Math.pow(2,i);
+        }
+    }
+
+    console.log(decimal)
+}
+
+
+
+/*Copy the idea not the code */
+function bi2dec(binary){
+    const value =[128, 64, 32, 16, 8, 4, 2, 1];
+    let count = 0;
+
+    for (let i = 0; i <= 8; i++){
+        if(binary[i] === '1'){
+            count += value[i]
+        }
+    }
+    
+}
+
+
+function decimaltobinary(decimal){
+    let count = decimal
+    let binary = ""
+
+    for(i = 0; i<count; i++){
+        if (decimal % 2 === 0){
+            binary = binary.concat("0")
+            count = count/2
+        }
+        else if ( decimal % 2 === 1){
+            binary = binary.concat("1")
+            decimal = decimal - 1
+            count = count/2
+        }
+
+    }
+
+    console.log(binary)
+
+
+}
+
+
+
+decimaltobinary(10)
