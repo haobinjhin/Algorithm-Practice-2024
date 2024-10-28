@@ -52,7 +52,7 @@ function binarytodecimal(binary){
         pseudobinary  = pseudobinary /10
         digit++
     }
-    
+
         let num1 = 0;
         let numfinal = 0;
         let standindigit = digit
@@ -80,7 +80,7 @@ function binarytodecimal(binary){
     
 }
     
-
+binarytodecimal(111111)
 
 
 
@@ -137,3 +137,15 @@ function decimaltobinary(decimal){
 
 
 decimaltobinary(10)
+
+/* node -- verion
+npm create vite@latest
+
+Vanilla
+JavaScript
+
+cd vite project
+npm install
+npm run dev
+
+ctrl C*/
